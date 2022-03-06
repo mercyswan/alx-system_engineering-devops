@@ -1,2 +1,5 @@
 #!/bin/bash
 chmod 744 hello
+[master b713f76] Bug fix
+ 1 file changed, 2 insertions(+)
+ create mode 100755 0x01-shell_permissions/5-execute
