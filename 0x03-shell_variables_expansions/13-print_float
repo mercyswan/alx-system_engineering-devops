@@ -1,2 +1,3 @@
 #!/bin/bash
 printf %.2fn $SUM
+printf %.2f\n
