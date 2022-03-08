@@ -1,3 +1,10 @@
 #!/bin/bash
+<<<<<<< HEAD
 echo {a..z} {a..z} | tr   \n | grep -v "oo"
 echo printf "%s\n" {a..z}{a..z} | grep -v "oo"
+=======
+echo {a..z} {a..z} | tr ' '  '\n' | grep -v "oo"
+>>>>>>> a47e6d7767530078cf7ec167bce029a725ef3cef
+#!/bin/bash
+#!/bin/bash
+echo {a..z}{a..z} | tr " " "\n" | grep -v "oo"
