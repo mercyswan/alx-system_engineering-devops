@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 # Displays 'Best School' in stdout 10 times using the until loop
+<<<<<<< HEAD
 index=0
+=======
+
+index=0
+
+>>>>>>> ef0c53ef9793c8ca669c3407ee722a401b5d3a68
 until [ $index -eq 10 ]
 do
   echo "Best School"

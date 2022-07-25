@@ -3,7 +3,13 @@
 #   "bad luck from China" for the 4th iteration
 #   "bad luck from Japan" for the 9th iteration
 #   "bad luck from Italy" for the 17th loop iteration
+<<<<<<< HEAD
 count=1
+=======
+
+count=1
+
+>>>>>>> ef0c53ef9793c8ca669c3407ee722a401b5d3a68
 while [ $count -le 20 ]
 do
   echo "$count"

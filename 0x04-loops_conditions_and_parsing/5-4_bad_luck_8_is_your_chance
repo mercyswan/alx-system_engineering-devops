@@ -3,7 +3,13 @@
 #   "bad luck" for the 4th iteration
 #   "good luck" for the 8th iteration
 #   "Best School" for all other iterations
+<<<<<<< HEAD
 count=0
+=======
+
+count=0
+
+>>>>>>> ef0c53ef9793c8ca669c3407ee722a401b5d3a68
 while [ $count -lt 10 ]
 do
   if [ $count -eq 3 ]

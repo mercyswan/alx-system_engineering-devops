@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 # Displays the contents of the current directory in list format.
+<<<<<<< HEAD
 #   Only displays the part of the name after the first dash
+=======
+#   Only displays the part of the name after the first dash. 
+
+>>>>>>> ef0c53ef9793c8ca669c3407ee722a401b5d3a68
 list=$(ls)
 for i in $list; do
   echo "$i" | cut -d '-' -f2

@@ -4,6 +4,10 @@
 #   Displays "Fizz" when the number is a multiple of 3.
 #   Displays "Buzz" when the number is a multiple of 5.
 #   Otherwise, displays the number.
+<<<<<<< HEAD
+=======
+
+>>>>>>> ef0c53ef9793c8ca669c3407ee722a401b5d3a68
 for num in {1..100}
 do
   if (( num % 3 == 0 && num % 5 == 0 ))
