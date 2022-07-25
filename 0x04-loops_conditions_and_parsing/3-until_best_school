@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Displays 'Best School' in stdout 10 times using the until loop
-
 index=0
-
 until [ $index -eq 10 ]
 do
   echo "Best School"
