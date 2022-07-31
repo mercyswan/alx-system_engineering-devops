@@ -2,10 +2,6 @@
 # Displays the time for 12 horus and 59 minutes.
 #   Displays hours from 0 to 12
 #   Displays minutes from 1 to 59
-<<<<<<< HEAD
-=======
-
->>>>>>> ef0c53ef9793c8ca669c3407ee722a401b5d3a68
 hour=0
 while [ $hour -le 12 ]
 do
