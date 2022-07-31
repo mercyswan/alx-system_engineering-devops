@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 # Tells a story based on the contents of the `/etc/passwd` file.
-<<<<<<< HEAD
-=======
-
->>>>>>> ef0c53ef9793c8ca669c3407ee722a401b5d3a68
 while IFS=':' read -r username password uid gid info home shell; do
   echo "The user $username is part of the $gid gang,"\
   "lives in $home and rides $shell."\
