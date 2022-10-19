@@ -1,33 +1,33 @@
 #!/usr/bin/python3
-"""fetches information from JSONplaceholder API and exports to JSON"""
+"""
+Python script that, using the JSON PLACEHOLDER API,
+for all employees, export data in the JSON format.
+"""
+import json
+import requests
 
-from json import dump
-from requests import get
-from sys import argv
+
+def export_all_to_json():
+    """
+    Gets data from JSON PLACEHOLDER API and writes into json format
+    Return:
+        None
+    """
+    base = "https://jsonplaceholder.typicode.com/"
+    users = requests.get(base + "users").json()
+    data = {}
+    for user in users:
+        _data = []
+        userTodos = requests.get(
+            base + "todos", params={"userId": user["id"]}).json()
+        for _ in userTodos:
+            row = {"username": user.get("username"),
+                   "task": _.get("title"), "completed": _.get("completed")}
+            _data.append(row)
+        data.update({user["id"]: _data})
+    with open("todo_all_employees.json", 'w', encoding="utf-8") as w:
+        w.write(json.dumps(data))
+
 
 if __name__ == "__main__":
-    users_url = "https://jsonplaceholder.typicode.com/users"
-    users_result = get(users_url).json()
-
-    big_dict = {}
-    for user in users_result:
-        todo_list = []
-
-        pep_fix = "https://jsonplaceholder.typicode.com"
-        todos_url = pep_fix + "/user/{}/todos".format(user.get("id"))
-        name_url = "https://jsonplaceholder.typicode.com/users/{}".format(
-            user.get("id"))
-
-        todo_result = get(todos_url).json()
-        name_result = get(name_url).json()
-        for todo in todo_result:
-            todo_dict = {}
-            todo_dict.update({"username": name_result.get("username"),
-                              "task": todo.get("title"),
-                              "completed": todo.get("completed")})
-            todo_list.append(todo_dict)
-
-        big_dict.update({user.get("id"): todo_list})
-
-    with open("todo_all_employees.json", 'w') as f:
-        dump(big_dict, f)
+    export_all_to_json()
